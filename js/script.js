@@ -13,12 +13,14 @@
     mainNav.classList.add('main-nav--hidden');
     btnNavOpen.classList.remove('main-nav__show--active');
     overlay.classList.remove('overlay--active');
+    document.body.style.overflow = 'auto';
   }
 
   var openBar = function() {
     mainNav.classList.remove('main-nav--hidden');
     btnNavOpen.classList.add('main-nav__show--active');
     overlay.classList.add('overlay--active');
+    document.body.style.overflow = 'hidden';
   }
 
   btnNavOpen.addEventListener('click', function(){
@@ -69,7 +71,7 @@ $(document).ready(function(){
     smartSpeed: 1000,
     animateOut: "slideOutDown",
     animateIn: "slideInDown",
-    navText: ["<button>Prev</button>", "<button>Next</button>"],
+    navText: ["Prev", "Next"],
   })
   });
   $('.carousel-items').owlCarousel({
@@ -79,7 +81,7 @@ $(document).ready(function(){
     mergeFit: true,
     responsiveClass:true,
     nav: true,
-    navText: ["<button>Prev</button>", "<button>Next</button>"],
+    navText: ["Prev", "Next"],
     responsive:{
         0:{
             items:2,
@@ -107,7 +109,7 @@ $(document).ready(function(){
     responsiveClass:true,
     nav: true,
     dots: false,
-    navText: ["<button>Prev</button>", "<button>Next</button>"],
+    navText: ["Prev", "Next"],
     responsive:{
         0:{
             items:2,
