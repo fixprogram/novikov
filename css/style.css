@@ -472,10 +472,11 @@ input[type="radio"].visually-hidden {
 
 .main-nav {
   padding-top: 100px;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 80%;
+  height: 100%;
   max-width: 330px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -486,7 +487,7 @@ input[type="radio"].visually-hidden {
           flex-direction: column;
   background: url("../img/svg/header-content__bg.svg") #ffffff no-repeat;
   background-size: auto 100px;
-  overflow-y: auto;
+  overflow: scroll;
   z-index: 3; }
   .main-nav::before {
     content: 'NOVIKOV';
@@ -561,6 +562,7 @@ input[type="radio"].visually-hidden {
 .main-nav__phone {
   margin-bottom: 20px;
   padding-left: 20px;
+  padding-bottom: 20px;
   text-align: left; }
 
 .phone-link {
@@ -901,8 +903,7 @@ input[type="radio"].visually-hidden {
   .owl-carousel .owl-nav button.owl-prev,
   .owl-carousel .owl-nav button.owl-next,
   .owl-carousel button.owl-dot {
-    border: none;
-    font: inherit; }
+    border: none; }
   .owl-carousel.owl-loaded {
     display: block; }
   .owl-carousel.owl-loading {
@@ -1167,6 +1168,7 @@ input[type="radio"].visually-hidden {
   height: 10px; }
 
 .item__features {
+  padding-right: 1px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1279,8 +1281,8 @@ input[type="radio"].visually-hidden {
 .icon--favorite2:hover {
   stroke: #e5285b; }
 
-.owl-next button,
-.owl-prev button {
+.owl-next,
+.owl-prev {
   position: absolute;
   top: 50%;
   left: 0;
@@ -1290,22 +1292,20 @@ input[type="radio"].visually-hidden {
   background: url("../img/svg/arrow-icon.svg") #ffffff center no-repeat;
   border-radius: 5px;
   -webkit-box-shadow: 0px 2px 10px rgba(30, 40, 55, 0.1);
-          box-shadow: 0px 2px 10px rgba(30, 40, 55, 0.1);
-  -webkit-transform: translateY(-33px);
-          transform: translateY(-33px); }
+          box-shadow: 0px 2px 10px rgba(30, 40, 55, 0.1); }
 
 @media (min-width: 600px) {
-  .carousel .owl-next button,
-  .carousel .owl-prev button {
+  .carousel .owl-next,
+  .carousel .owl-prev {
     top: 100%; } }
 
-.owl-next button {
+.owl-next {
   right: 0;
   left: auto; }
 
-.owl-prev button {
-  -webkit-transform: translateY(-33px) rotate(180deg);
-          transform: translateY(-33px) rotate(180deg); }
+.owl-prev {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
 
 .owl-dots {
   height: 8px;
@@ -2062,6 +2062,7 @@ input[type="radio"].visually-hidden {
   list-style-type: none; }
 
 .footer-bottom {
+  margin-top: 60px;
   background: #F8F8F8;
   padding: 25px 20px;
   width: 100%; }
