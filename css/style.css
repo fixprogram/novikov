@@ -604,6 +604,12 @@ input[type="radio"].visually-hidden {
 .catalog {
   padding-top: 20px; }
 
+@media(min-width: 1390px) {
+  .catalog {
+    padding-top: 0;
+  }
+}
+
 .catalog__show {
   display: inline;
   color: #ec285d;
